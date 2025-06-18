@@ -1,0 +1,12 @@
+<select
+  (change)="changeLanguage($event)"
+  [value]="currentLang"
+  class="p-2 border rounded"
+  id="langSelect"
+>
+  @for (code of langs; track code) {
+    <option [value]="code">
+      {{ "languages." + code | translate }}
+    </option>
+  }
+</select>
